@@ -1,97 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>hbr687.com</title>
+  <title>HBR687.com</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
       background: black;
-      color: white;
+      color: #ccc;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-family: Arial, sans-serif;
+      flex-direction: column;
       overflow: hidden;
     }
 
-    .container {
+    .line {
       opacity: 0;
-      animation: fadeIn 2s ease forwards;
+      margin: 10px 0;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    .main {
+    .big {
       font-size: 3rem;
       font-weight: bold;
     }
 
-    .blink {
-      animation: blink 1s infinite;
+    .medium {
+      font-size: 1.5rem;
+      font-weight: normal;
     }
 
-    @keyframes blink {
-      50% { opacity: 0; }
+    .small {
+      font-size: 1.1rem;
+      font-weight: lighter;
     }
 
-    .sub {
-      font-size: 1.2rem;
-      color: #bbbbbb;
-      margin-top: 10px;
+    .bottom {
+      font-size: 1.3rem;
+      margin-top: 50px;
     }
 
-    .random {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #888;
-    }
-
-    .tracking {
-      position: absolute;
-      bottom: 40px;
-      font-size: 0.9rem;
-      color: #666;
-      opacity: 0.7;
-    }
-
-    .jk {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      color: #aaa;
-      opacity: 0.8;
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="main">
-      Why are you so nosey<span class="blink">?</span>
-    </div>
-    <div class="sub">no but really... why?</div>
-    <div class="random" id="randomText"></div>
-  </div>
-
-  <div class="tracking">🔍 analyzing curiosity levels...</div>
-  <div class="jk">i’m just kidding 😏</div>
-
-  <script>
-    const messages = [
-      "you really typed the whole domain huh",
-      "curiosity didn't kill the cat... yet",
-      "there’s nothing here bro",
-      "you expected something important?",
-      "this could’ve been an email",
-      "you thought you found something didn’t you",
-      "still looking?"
-    ];
-
-    const randomText = document.getElementById("randomText");
-    randomText.innerText = messages[Math.floor(Math.random() * messages.length)];
-  </script>
+  <div class="line big" style="animation: fadeIn 1s ease forwards; animation-delay: 0s;">HBR687.com</div>
+  <div class="line medium" style="animation: fadeIn 1s ease forwards; animation-delay: 1s;">you really typed out that whole domain</div>
+  <div class="line small" style="animation: fadeIn 1s ease forwards; animation-delay: 2s;">and little did you realize</div>
+  <div class="line small" style="animation: fadeIn 1s ease forwards; animation-delay: 3s;">you completely wasted your time</div>
+  <div class="line bottom" style="animation: fadeIn 1s ease forwards; animation-delay: 4s;">you are quite nosy, aren't you?</div>
 </body>
 </html>
