@@ -1,24 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>hbr87.com</title>
+  <title>hbr687.com</title>
   <style>
     body {
-      background-color: black;
+      margin: 0;
+      height: 100vh;
+      background: black;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      text-align: center;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
-    h1 {
-      font-size: 3em;
+
+    .container {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .main {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .sub {
+      font-size: 1.2rem;
+      color: #bbbbbb;
+      margin-top: 10px;
+    }
+
+    .random {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #888;
+    }
+
+    .tracking {
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.9rem;
+      color: #666;
+      opacity: 0.7;
+    }
+
+    .jk {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <h1>Why are you so nosy?</h1>
+  <div class="container">
+    <div class="main">
+      Why are you so nosey<span class="blink">?</span>
+    </div>
+    <div class="sub">no but really... why?</div>
+    <div class="random" id="randomText"></div>
+  </div>
+
+  <div class="tracking">🔍 analyzing curiosity levels...</div>
+  <div class="jk">i’m just kidding 😏</div>
+
+  <script>
+    const messages = [
+      "you really typed the whole domain huh",
+      "curiosity didn't kill the cat... yet",
+      "there’s nothing here bro",
+      "you expected something important?",
+      "this could’ve been an email",
+      "you thought you found something didn’t you",
+      "still looking?"
+    ];
+
+    const randomText = document.getElementById("randomText");
+    randomText.innerText = messages[Math.floor(Math.random() * messages.length)];
+  </script>
 </body>
 </html>
